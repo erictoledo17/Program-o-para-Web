@@ -1,0 +1,37 @@
+<h3>Fale conosco</h3>
+
+Olá, seja bem vindo à nossa loja virtual. Qualquer dúvida estamos à disposição.
+Entre em contato pelo formulário abaixo:
+
+<br><br>
+
+<h4>{{alerta}}</h4>
+<br><br>
+
+Nome:
+<input type="text" name="nome" [(ngModel)]="obj.nome" placeholder="Digite seu nome completo"/>
+<br>
+
+Email:
+<input type="email" name="email" [(ngModel)]="obj.email" placeholder="Informe seu email"/>
+<br>
+
+Assunto:
+<select name="assunto" [(ngModel)]="obj.assunto">
+    <option>Dúvidas com produtos</option>
+    <option>Dúvidas com pedidos</option>
+    <option>Problemas gerais</option>
+    <option>Críticas e sugestões</option>
+</select>
+<br>
+
+Mensagem:
+<textarea name="mensagem" [(ngModel)]="obj.mensagem" rows="5" cols="50"></textarea>
+<br>
+
+<input type="checkbox" name="copia" [(ngModel)]="obj.copia">
+Desejo receber uma cópia desse email
+
+<br><br>
+
+<button (click)="enviar()">Enviar</button>
